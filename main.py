@@ -1,16 +1,13 @@
 # CEOGAME Automation System
 # Author: Zeki
-# Version: 1.4.0
+# Version: 1.4.1
 # Description: System created to automatically manage your companies in CEOGAME, a business simulation game
 #   just like a real world CEO you gotta find the best solutions to your business, that's why I created this
 #   app to manage my companies for me. Some may call this cheating, I call this being smarter than competition.
 
 # Changelog:
-# - Added "nempresas" command to count the number of companies you have. (alias: number)
-# - Added "rodada" command
-# - Added "emails" command
-# - Added "turnos" command
-# - Added "dev" command
+# - Added .env file to configure your Authorization key easily
+
 # More information can be found in the Wiki at our Github repo (https://github.com/EzequielDM/ceogame-manager)
 
 # I'll ask for your forgiveness in advance, I'm not a Python developer and I was too bored to make a C++ application
@@ -20,16 +17,20 @@
 # property, like... fr?!?!? But I'm dealing with this and knowledge is never enough, so, one more programming
 # language down the list.
 
+
+from requests import status_codes
 import json
 import requests
 import os
 import math
+from dotenv import load_dotenv
 
-from requests import status_codes
+load_dotenv()   # loads the .env file
+
 
 headers = {
     # Do remember that the authorization currently needs to be gathered from a proxy like Postman.
-    'authorization': 'Bearer eyJhbGcikajsda0875985asdadhgj1297dusidd187aSUDB1sbds18d1=',
+    'authorization': os.getenv("AUTH"),
     'content-type': 'text/json; charset=utf-8',
     'content-length': '45',
     'host': 'api.ceogame.com.br',

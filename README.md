@@ -9,6 +9,7 @@ The requirements for the program to run without any errors are the following:
 
 - [Python 3.X](https://www.python.org/ftp/python/3.10.0/python-3.10.0-amd64.exe)
 - [requests](https://pypi.org/project/requests/) - Python package to handle HTTP requests
+- [python-dotenv](https://pypi.org/project/python-dotenv/) - Python package to implement .env files as OS environment variables.
 
 # Installation
 
