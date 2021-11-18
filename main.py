@@ -7,6 +7,11 @@
 
 # Changelog:
 # - Added "nempresas" command to count the number of companies you have. (alias: number)
+# - Added "rodada" command
+# - Added "emails" command
+# - Added "turnos" command
+# - Added "dev" command
+# More information can be found in the Wiki at our Github repo (https://github.com/EzequielDM/ceogame-manager)
 
 # I'll ask for your forgiveness in advance, I'm not a Python developer and I was too bored to make a C++ application
 # to do these tasks, so I stuck with Python for now and I'm kind of having a hard time because of syntax and
@@ -24,7 +29,7 @@ from requests import status_codes
 
 headers = {
     # Do remember that the authorization currently needs to be gathered from a proxy like Postman.
-    'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkZWxpdmVyeW9uLmNvbS5iciIsImVtYWlsIjoiZ3Vlc3Q2MTZkM2RiMThkNGVmQGNlb2dhbWUuY29tLmJyIiwia2V5IjoiNjE5NjcwYjc1ZTQzNiIsImV4cCI6MTYzNzMzNTYwN30=.J8QWZUgTraaV1iQRsA87ZAlZfkARYUFrh+UTZOoJYJk=',
+    'authorization': 'Bearer eyJhbGcikajsda0875985asdadhgj1297dusidd187aSUDB1sbds18d1=',
     'content-type': 'text/json; charset=utf-8',
     'content-length': '45',
     'host': 'api.ceogame.com.br',
