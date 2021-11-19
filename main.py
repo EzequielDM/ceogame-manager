@@ -154,6 +154,10 @@ def pagarMarketing():
 
 def updateTurnos():
     global turnos
+    if(getDadosPersonagem() == False):
+        print(f"Token inválido ou expirado! 401 - UNAUTHORIZED\n")
+        quit()
+        return
     turnos = getDadosPersonagem()['personagem']['turnos']
     return
 
